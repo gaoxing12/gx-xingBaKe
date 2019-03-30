@@ -1,0 +1,192 @@
+header[role='banner']{
+.dengLu{
+//  background: red;
+    >ul{
+//      background: yellow;
+        >li{
+            list-style: none;
+            padding-left: 0px;
+//          background: green;
+            text-align: left;
+            padding-left: 25px;
+            margin-bottom: 16px;
+            >a{
+                color: #8C8C8C;
+                &:hover{
+                    color: #212121;
+                }
+            }
+            
+        }
+    }
+}
+}
+header[role='banner']{
+    .HappyCoffee{
+    text-align: left;
+    padding-left: 20px;
+//  background: pink;
+}
+}
+
+//季度的菜单活跃项
+header[role='banner']{
+    .dengLu{
+        >ul{
+            >li{
+                >a.jiDuActive{               
+                    color: #212121;
+                    padding-bottom: 5px;
+                    border-bottom: 3px solid #00a862;                   
+                }                
+            }
+        }
+    }
+}
+//让body的颜色为白色
+#jiduBody{
+    background: #fff;
+}
+.jidubox{
+    background: #fff;
+}
+//p标签段落的字体大小
+#recruitBody{
+    >.oneKuang,.yu{
+        overflow: hidden;
+//      background: red;
+        position: relative;
+//      height: 122px;
+        >.one{
+            >h2{
+                font-size: 24px;
+            }
+            >p{
+                text-align: center;
+//              background: yellow;
+                font-size: 17px;
+                line-height: 26px;
+                margin-top: 25px;
+                margin-bottom: 50px;
+            }
+        }
+        >.mianHua{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 42px;
+            background: -webkit-linear-gradient(transparent, #fff); /* Safari 5.1 - 6.0 */
+              background: -o-linear-gradient(transparent, #fff); /* Opera 11.1 - 12.0 */
+              background: -moz-linear-gradient(transparent, #fff); /* Firefox 3.6 - 15 */
+              background: linear-gradient(transparent, #fff); /* 标准的语法 */
+            bottom: 0px;
+        }
+    }
+    
+}
+
+//箭头
+.icon-jiantou-copy{
+    display: block;
+    position: relative;
+//  background: red;
+    font-size: 20px;
+    transition: all 0.3s;   
+}
+@media (max-width:1024px){
+    header[role='banner']{
+    .dengLu{
+        >ul{
+            margin-left: -6px;
+            padding-left: 0;
+            >li{
+//              background: red;
+                float: left;              
+            }
+        }
+    }
+    }
+}
+//所有新品部分
+.all_new_product{
+    text-align: center;
+    >div{
+        width: 92%;
+//      background: orange;
+    }
+    
+}
+.newGoods{
+    padding: 29px 0px;
+}
+.ice_cream{
+    >div{
+        
+        >p{
+            font-size: 16px;
+            padding-top: 24px;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+#searchCaidan{
+    position: fixed;
+    right: 0px;
+//  bottom: 10px;
+    width: 115px;
+//  height: 51px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    background: #00A862;
+    border-radius: 30px;
+}
+.bottomCaidan{
+    background: #fff;
+    color: #979797;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    >.row{
+        >div{
+            text-align: center;
+            >span{
+                font-size: 25px;
+            }
+            >p{
+                margin-bottom: 1px;
+                font-size: 12px;
+            }
+        }
+        >div:nth-child(4){
+            color: #00a862;
+        }
+    }
+}
+@media (min-width:640px){
+    .bottomCaidan{
+        .sr-only();
+    }
+    .icon-jiantou-copy{
+        .sr-only();
+    }
+    #searchCaidan{
+        bottom: 10px;
+    }
+    .oneKuang{
+        height: auto;
+    }
+}
+//自己创建一个类
+@media (max-width:640px){
+    #searchCaidan{
+        bottom: 64px;
+    }
+    .oneKuang{
+        height: 122px;
+    }
+}

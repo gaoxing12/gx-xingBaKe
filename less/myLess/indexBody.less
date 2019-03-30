@@ -1,0 +1,234 @@
+//大轮播图
+#carousel-example-generic{
+    padding-bottom: 30px;
+//  height: 400px;
+//  position: relative;
+//  margin-bottom: 74px;
+    .advert{
+        position: absolute;
+        width: 38px;
+        height: 22px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        background: #000;
+        opacity: 0.5;
+        top: 10px;
+        right: 10px;
+    }
+}
+.carousel-control.right{
+    background-image: none;
+}
+//广告
+#recruitBody{
+//  margin-top: 30px;
+    .starParty{
+        background: @pagination-bg;
+         text-align: left;
+         >div:nth-child(1){
+//           background: red;
+             padding-left: 54px;
+         }
+         >div:nth-child(2){
+//           background: yellow;            
+             img{
+                 display: block;
+                 margin:0 auto;
+             }
+         }
+         @media (max-width: @screen-xslitle) {
+            >div:nth-child(2){
+                padding: 20px 0px 0px 20px;
+            } 
+         }
+         @media (min-width: @screen-sm) {
+            >div:nth-child(2){
+                padding: 60px 0px 0px 20px;
+            } 
+         }          
+    }
+}
+
+//星响俱乐部
+.starParty{
+    >div:nth-child(1){
+        >p{
+            color: @font-start-color;
+            font-size: @font-size-sixty;
+            line-height: 30px;
+            a{
+                color: @font-start-p-color;
+                text-decoration: none;
+            }
+        }
+        >.starZhuCe,>.starDeng{
+            color: @nav-dengLu-color;
+            border-color: @nav-dengLu-color;
+            border-radius: 14px;
+            font-size: @font-size-sixty;
+            padding: 6 16px;
+        }
+        >.starZhuCe{
+            margin-left: 15px;
+        }
+    }
+    div{
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+//正在招募
+.zhaoMuIng{
+    div{
+        padding-bottom: 20px;
+    }  
+    background: #F7F7F7;
+}
+//星巴克精选
+#recruitBody{
+   .starbuckSelect{
+        background: #F7F7F7;
+        padding-top: 40px;
+        >p{
+            padding-top: 18px;
+            padding-bottom: 70px;
+            font-size: @font-size-sixty;
+            color: @font-start-color;
+        }
+        
+        .starbuckSelect-kuang{
+            border: 1px solid #E0E0E0;
+            background: #fff;
+            padding-top: 50px;
+            position: relative;
+            padding-bottom: 25px;
+            
+            margin-bottom: 35px;
+            b{
+                color: #212121;
+                text-decoration: none;
+                font-size: @font-size-sixty;
+            }
+            p:nth-child(2){
+                color: @font-start-color;
+                padding-top: 15px;
+            }
+            p:nth-child(3){
+                color: @font-start-color;
+                padding-top: -5px;
+            }
+            >a{
+                text-decoration: none;
+                font-size: 12px;
+                color: @font-start-p-color;
+                padding-bottom: 28px;
+            }
+            >img{
+                display: block;
+                position: absolute;
+                top: -29px;
+                left: 50%;
+                margin-left: -43px;
+            }
+            
+        }
+    } 
+}
+//咖啡星讲堂（最后的咖啡轮播图）
+.CoffeeHall{
+    background: -webkit-linear-gradient(#fcfcfc, #fff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#fcfcfc, #fff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#fcfcfc, #fff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#fcfcfc, #fff);
+    
+    p{
+        margin-top: 20px;
+        font-size: 16px;
+        color: #6f6f6f;
+        margin-bottom: 30px;
+    }
+    .coffeLunBox{
+        position: relative;
+        height: 226px;
+        margin-bottom: 45px;
+        overflow: hidden;
+        ul{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 1260px;
+            height: 226px;
+            li{
+                width: 288px;
+                height: 226px;
+                margin-left: 15px;
+                border: 1px solid #E8E8E8;
+                float: left;
+                list-style: none;
+                
+                text-align: left;
+                a{
+                    color: "";
+                    text-decoration: none;
+                    >div:nth-child(1){
+                        
+                        height: 168px;
+                        background: url(../../img/coffeehouse-4-fundamentals-kv.jpg);
+                        background-size:288px 168px;
+                    }
+                }
+                
+                .coffeLun-bg{
+                    overflow: auto;
+                    p{
+                        width: 82px;
+                        height: 33px;
+                        line-height: 33px;
+                        background: #C2A661;
+                        color: #fff;
+                        margin-top: 7px;
+                        text-align: center;
+                    }
+                }
+                .coffeLunBottomTex{
+                    height: 56px;
+                    line-height: 56px;
+                    padding-left: 18px;
+                    font-size: 16px;
+                    color: #212121;
+                    background: #fff;
+                }
+            } 
+        }
+//      按钮
+        #indexRifhtBtn{
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            background: #fff; 
+            display: none; 
+            margin-top: -30px;         
+        }
+        #indexLeftBtn{
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            background: #fff;
+            margin-top: -30px; 
+            
+        }
+        
+    }
+}
+

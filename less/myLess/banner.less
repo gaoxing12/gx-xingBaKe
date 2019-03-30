@@ -1,16 +1,235 @@
 //在屏幕为1024px
-@media (min-width: 1024px) {
+@media (min-width: @screen-lglitle) {
     main[rol="main"]{
         #carousel-example-generic{
             width: 69%;
             margin-left: 31%;
         }
+//      轮播图下面的所有部分，我用来一个大的div包裹起来
+        #recruitBody{
+            width: 69%;
+            margin-left: 31%;
+        }
+    }
+    
+//  头部的导航条在1024px界限上的不同状态
+    #header{
+        width: 31%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom:0;
+        z-index: 20;
+        .containerNavBox{
+//         width: 31%; 
+        }
+    }
+    
+    .HappyCoffee{
+        padding-top: 230px;
+        padding-bottom: 25px;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .dengLu{
+        padding-bottom: 200px;
+        text-align: center;
+
+    }
+    
+    #caiDanLan{
+        width: 70%;
+        margin-left: 21%;
+        
     }
 }
-@media (max-width: 1024px) {
+
+
+@media (max-width: @screen-lglitle) {
     main[rol="main"]{
         #carousel-example-generic{
             width: 100%;
         }
+        #recruitBody{
+           width: 100%;
+        }
+    }
+    #header{
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .HappyCoffee{
+        padding-top: 20px;
+    }
+    .dengLu{
+        padding-bottom: 30px;
+    }
+//  html{
+//      overflow-y: hidden;
+//  }
+}
+//大轮播图下面用了一个整体的大盒子装#recruitBody，让他里面的内容居中
+#recruitBody{
+    text-align: center;
+    .zhaoMuIng{
+        padding-top: 20px;
+    }
+}
+//控制整个页面的y轴，使其不出现导航条
+body{
+    overflow-x: hidden;
+}
+//导航条的菜单及关闭按钮
+#navButotm{
+    float: right;
+}
+//导航条
+header[role="banner"]{
+    background: @body-bg;
+    .navLogo{
+    padding-top: 18px;
+    ul{
+        display: inline-block;
+        >li{
+            float: left;
+        }
+    }
+    .brandLogo{
+        padding-top: 0px;
+        
+    }
+//  导航条最上面的按钮
+    .navRightBtn{
+        > #navButotm{
+            font-size: 26px;
+            color: #858585;
+//          margin-right: 20px;
+        }
+    }
+//  .navCaiDan{
+//      float: left;
+//  }
+    .tuPian{
+        float: left;
+    }
+    }
+//  心情惬意，来杯咖啡吧
+    .HappyCoffee{
+        font-size: 25px;
+        font-weight: @font-size-nie;
+        padding-left: 0px;
+//      display: none;
+    }
+    .headerDL{
+//      display: none;
+    }
+//  登录和注册的按钮
+    .dengLu{
+        a{
+            color: @nav-dengLu-color;
+            font-size: 16px;
+            &:hover{
+                color: @nav-dengLu-hover-color;
+                text-decoration: none;
+            }
+        }
+        
+        a:nth-child(2){
+            border: 1px solid @nav-dengLu-color;
+            border-radius: 15px;
+            padding: 3px @font-size-small;
+            margin-left:20px ;
+        }
+        
+    }
+    .containerNavBox{
+        background: @body-bg;
+    }
+}
+.navCaiDan{
+    list-style: none;
+    margin-top: 9px;
+    font-size: 17px;
+    font-weight: @font-size-six;
+    padding-left: 10px;
+    li{
+        padding-right: 20px;
+        a{
+            color: #212121;
+            
+        }
+    }
+}
+//点击导航条按钮出现的盒子
+#caiDanLan{
+    background: @body-bg;
+    display: none;
+    >ul.caiDanbox{
+        padding-left: 0px;
+        >li{
+            padding-top: 15px;
+            list-style: none;
+//          background: pink;
+            >a{
+                font-size: 18px;
+                color: #212121;
+                font-weight: 900;
+                text-decoration: none;
+            }
+            .xian{
+                display: block;
+                height: 1px;
+                background: #e0e0e0;
+            }
+        }
+    }
+    
+    .kaidengLu{
+//      padding-left: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    >ul.terms,>ul.address{
+        padding-top: 10px;
+        list-style: none;
+        padding-left: 0px;
+        color: #EEEEEE;       
+        >li{
+            float: left;
+            >a{
+                color: #9E9E9E;
+                font-size:@font-size-small; 
+              &:hover{
+                    text-decoration: none;
+                }  
+            }
+        }
+    }
+}
+//为了导航条在不同的屏幕下出现滚动条
+.scrollNav{
+    @media (max-width:@screen-lglitle){
+        body{
+            overflow-y: hidden;
+            margin-top: 800px;
+        }
+    }
+    @media (min-width:@screen-lglitle){
+        body{
+            overflow-y: auto;
+            margin-top: ;
+        }
+    }
+}
+
+//头部出现断点 
+@media (max-width:640px){
+    .navLogo,.headerDL{
+        .sr-only();
     }
 }

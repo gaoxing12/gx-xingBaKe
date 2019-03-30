@@ -1,0 +1,387 @@
+html,body{
+    height: 100%;
+    margin: 0px;
+    background: #E6E6E6;
+}
+//最开始的背景图
+header[role="search"]{
+    .coffeeBgBox{
+        position: relative;
+        padding-left: 0px;
+        padding-right: 0px;
+//      广告
+        .advertCof{
+            position: absolute;
+            width: 36px;
+            height: 21px;
+            line-height: 21px;
+            background: #000000;
+            color: #fff;
+            text-align: center;
+            opacity: 0.5;
+            top: 10px;
+            right: 10px;
+        }
+    }
+}
+//      直处于浮动的导条
+.coffeeSearch{
+    padding-top: 60px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 24px;
+    left: 10%;
+    right: 10%;
+    z-index: 1;
+    transition: all 0.5s;
+    >div{
+       float: left; 
+    }
+    >.searchLeft,>.searchright{
+        cursor: pointer;
+        position: absolute;
+        padding: 19px 21px;
+        z-index: 2;
+        box-sizing: border-box;
+        text-align: center;
+        background: @coffee-fixed-bg;
+        &:hover{
+            background: @coffee-fixed-hover-bg; 
+        }
+    }
+    >.searchLeft{
+        top: 0px;
+        left: 0px;
+    }
+    >.searchright{
+        top: 0px;
+        right: 0px;
+    }
+    >.searchMiddle{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 10px 0;
+        >.schMidBox{
+            >span{
+                padding: 10px 1px;
+                background: #CCCCCC;
+            }
+            >img{
+                margin: 0px  10px;
+            }
+        }
+    }
+}
+//点击搜索图标的时候出现的“输入关键词的搜索框”开始
+#keywords{
+    width: 96%;
+    position: absolute;
+    top: 72px;
+    padding: 15px 22px;
+    left: 2%;
+    right: 2%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    display: none;
+}
+
+
+//**********coffee的主要部分***********
+section#coffeeModul{
+    background: #edebe9;
+    padding-bottom: 40px;
+    .modulTitle{
+        width: 85%;
+        position: relative;
+        margin-top: -4%;
+        padding: 15px;
+        background: #fff;
+        >h1{
+//          font-size: 50px;
+            font-weight: 900;
+//          background: red;
+            text-align: center;
+        }
+        >p{
+//          font-size: 26px;
+            text-align: center;
+//          background: yellow;
+        }
+    }
+}
+//路径导航
+.way{
+    background: #fff;
+   text-align: center;
+   padding-top: 25px;
+   >li{
+       >a{
+         color: #000;
+         text-decoration:none; 
+           &:hover{
+                color: #166e50;
+           }  
+       }       
+   }
+   >li.active{
+       color: #166e50;
+   } 
+}
+//比例
+.proportion{
+    width: 85%;
+    background:#fff;
+    .proportionImg{
+//      background: chartreuse;
+        >img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    >p{
+        font-size: 20px;
+        padding: 22px 23px 0 23px;
+        line-height: 36px;
+    }
+    >h2{
+        
+        font-size: 40px;
+        font-weight: 800;
+        padding-left: 22px;
+        margin-top: 10px;
+        margin-bottom: 18px;
+    }
+    >.subtitle{
+//      display: block;
+        font-size: 18px;
+//      background: green;
+        padding: 18px 0px;
+        padding-left: 22px;
+        font-weight: 700;
+    }
+    >.waterUl{
+        font-size: 20px;
+        >li{
+            padding-top: 10px;
+        }
+    }
+}
+//**********coffee的主要部分***********
+//相关文章部分开始
+.aboutaArticle{
+    background: #e6e6e6;
+    .articleBox{
+        width: 85%;
+//      background: pink;       
+    }
+}
+.startArticle{
+            text-align: center;
+            margin-top: 45px;
+            padding-bottom: 10px;
+//          background: yellow;
+            span{
+                font-size: 33px;
+                color: @coffee-font-color;
+                padding: 0px 10px;
+                padding-bottom: 10px;
+                border-bottom:4px solid @coffee-font-color ;
+//              background: plum;
+            }
+            p{
+                padding-top: 28px;
+                font-size: 18px;
+                letter-spacing: 5px;
+                font-weight: bold;
+                color: #166E50;
+//              background: red;
+            }
+        }
+//三篇文章
+.threeWenzhang{
+    margin-bottom: 60px;
+//  background: red;
+    >div{
+        position: relative;
+        .wenZhangImgBox{
+            background: center center no-repeat;
+            background-size: 100% 100%;
+            transition: all 0.1s;
+            >span{
+                position: absolute;
+                color: @coffee-font-color;
+                top: 10px;
+                right: -3px;
+                font-size: 28px;
+            }
+            >p{
+                position: absolute;
+                color: #fff;
+                top:20px;
+                right: 6px;
+            }
+        }
+    }
+}
+//动画效果
+.wzKuang:hover .wenZhangImgBox{
+    background-size: 130% 130%;
+}
+//三篇文章的背景
+.WenzhangText{
+    >.startArticle{
+        position: relative;
+        margin-top: 20px;
+        >.duanDiancoffee{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #C2C2C2;
+        }
+    }
+}
+.wzKuang{
+//  overflow: auto;
+    background: #fff;
+    perspective: 1000px;
+}
+.wzDuanluo{
+    padding: 0px 15px;
+}
+//相关文章部分结束
+
+@media (max-width:@screen-xslitle){
+    main{
+        #coffeeModul{
+            h1{
+                font-size: 2.8rem;
+                }
+            p{
+                font-size: 1.4rem;
+            }
+            .proportion>p{
+                line-height: 27px;
+            }
+        }
+    }
+    .buckImg{
+        width: 100px;
+    } 
+    
+    .WenzhangText{
+        >p,>.wzDuanluo{
+            text-align: left;
+        }
+    } 
+}
+@media (min-width:@screen-xslitle){
+    main{
+        #coffeeModul{
+            h1{
+                font-size: 50px;
+                }
+            .modulTitle{
+                p{
+                    font-size: 26px;
+                }
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .buckImg{
+        width: 100px;
+    }  
+}
+@media (min-width:@screen-sm){
+        .WenzhangText{
+            width: 100%;
+        }
+        .wenZhangImgBox{
+            height: 220px;
+            width: 100%;
+            position: relative;
+        }           
+        .footerBox{
+            >div:nth-child(2){
+                text-align: right;
+            }
+        }       
+        .wzKuang{
+            height: 519px;
+            font-size: 16px;
+        }
+        .duanDiancoffee{
+            .sr-only();
+        }
+}
+
+@media (max-width:@screen-sm){
+        .WenzhangText{
+            width: 70%;
+            margin-left: 30%;
+        }
+        .wenZhangImgBox{
+            height: 100%;
+            width: 28%;
+            position: absolute;
+            >span{
+                .sr-only();
+            }
+            >p{
+                .sr-only();
+            }
+        }
+        .WenzhangText{
+            >.startArticle{
+                padding-top: 20px;
+                
+            }
+        }
+        .footerBox{
+            >div{
+                text-align: center;                
+            }
+            >div:nth-child(2){
+                padding: 10px 0;
+            }
+        } 
+}
+//脚部
+footer{
+    background: #36342f;
+    padding: 25px 0px;
+    .footerBox{
+        background: #36342f;
+        >div:nth-child(1){
+            a{
+               color: #fff;
+               text-decoration: none; 
+            }            
+        }
+        >div:nth-child(2),>div:nth-child(3){
+            a{
+              color: #c2c2c2;
+              text-decoration: none;
+                &:hover{
+                    color: #fff;
+                }  
+            }
+            
+        }
+    }
+}
+//监听滚动页面的条开始
+.coffeeTiao{
+    width: 0%;
+    padding-top: 3px;
+    position: absolute;
+    bottom: -3px;
+    background: @coffee-font-color;
+}
+
